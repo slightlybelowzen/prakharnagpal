@@ -9,6 +9,37 @@
 }
 
 :root {
+    --font-article: "Adobe Caslon Pro", "Times New Roman", serif;
+    font-feature-settings: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.5;
+    /* TODO: make this more mobile friendly, something like calc(1.1em + 0.333vw) */
+    font-size: 1.3em;
+    -webkit-font-smoothing: antialiased;
     font-weight: 400;
     font-feature-settings: "kern" 1;
+    font-family: var(--font-article);
+    --grid-gap: 2em;
+    --grid-margin: 4em;
+}
+
+main {
+    display: grid;
+    padding-right: calc(1 * var(--grid-margin));
+    padding-left: calc(1 * var(--grid-margin));
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    margin-right: auto;
+    max-width: 100em;
+}
+
+article {
+    grid-column-start: 4;
+    grid-column-end: span 6;
+    margin-top: 1em;
+}
+
+article>*+* {
+    margin-top: 0.5em;
 }

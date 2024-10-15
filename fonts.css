@@ -1,26 +1,26 @@
 @font-face {
-    font-family: 'AdobeCaslonPro';
+    font-family: 'Adobe Caslon Pro';
     src: url('./static/fonts/AdobeCaslonPro-Regular.woff2');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'AdobeCaslonPro';
+    font-family: 'Adobe Caslon Pro';
     src: url('./static/fonts/AdobeCaslonPro-Italic.woff2');
     font-style: italic;
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'AdobeCaslonPro';
+    font-family: 'Adobe Caslon Pro';
     src: url('./static/fonts/AdobeCaslonPro-SemiBold.woff2');
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face {
-    font-family: 'AdobeCaslonPro';
+    font-family: 'Adobe Caslon Pro';
     src: url('./static/fonts/AdobeCaslonPro-Bold.woff2');
     font-style: normal;
     font-weight: 700;
