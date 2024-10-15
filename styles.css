@@ -9,14 +9,6 @@
 }
 
 :root {
-    --font-plain: Arial, sans-serif;
-    --font-serif: Georgia, serif;
-    --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
-    font-family: var(--font-plain);
-}
-
-code {
-    font-family: var(--font-monospace);
-    font-size: 92.5%;
-    letter-spacing: -0.015em;
+    font-weight: 400;
+    font-feature-settings: "kern" 1;
 }
