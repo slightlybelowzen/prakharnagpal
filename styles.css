@@ -47,3 +47,7 @@ article>*+* {
 .neutraface {
     font-family: "Neutraface";
 }
+
+.medium {
+    font-weight: 500;
+}
