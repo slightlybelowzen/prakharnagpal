@@ -9,13 +9,13 @@
 }
 
 :root {
-    --font-article: "Adobe Caslon Pro", "Times New Roman", serif;
+    --font-article: "Graphik", sans-serif;
     font-feature-settings: normal;
-    letter-spacing: normal;
+    letter-spacing: -0.01em;
     line-break: auto;
     line-height: 1.5;
     /* TODO: make this more mobile friendly, something like calc(1.1em + 0.333vw) */
-    font-size: 1.3em;
+    font-size: 0.95em;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
     font-feature-settings: "kern" 1;
@@ -42,4 +42,8 @@ article {
 
 article>*+* {
     margin-top: 0.5em;
+}
+
+.neutraface {
+    font-family: "Neutraface";
 }
