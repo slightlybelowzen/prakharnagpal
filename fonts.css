@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'AdobeCaslonPro';
+    src: url('./static/fonts/AdobeCaslonPro-Regular.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'AdobeCaslonPro';
+    src: url('./static/fonts/AdobeCaslonPro-Italic.woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'AdobeCaslonPro';
+    src: url('./static/fonts/AdobeCaslonPro-SemiBold.woff2');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'AdobeCaslonPro';
+    src: url('./static/fonts/AdobeCaslonPro-Bold.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./static/fonts/Graphik-Regular.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./static/fonts/Graphik-Medium-Italic.woff2');
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./static/fonts/Graphik-Medium.woff2');
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Irvin';
+    src: url('./static/fonts/IrvinPro-HeadingSimple.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Neutraface';
+    src: url('./static/fonts/Neutraface-SemiBold.woff2');
+    font-weight: 600;
+    font-style: normal;
+}
