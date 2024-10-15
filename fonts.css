@@ -18,17 +18,3 @@
     font-style: normal;
     font-weight: 500;
 }
-
-@font-face {
-    font-family: 'Irvin';
-    src: url('./static/fonts/IrvinPro-HeadingSimple.woff2');
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Neutraface';
-    src: url('./static/fonts/Neutraface-SemiBold.woff2');
-    font-weight: 600;
-    font-style: normal;
-}
