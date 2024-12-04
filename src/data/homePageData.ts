@@ -8,21 +8,18 @@ export const homePageData: HomePageData = {
       {
         title: "Tatem's scroll animations",
         description: `Recreating some beautiful animations on the Tatem website.`,
-        link: "/experiments/tatem",
+        link: "/experiments/tatem-animations",
         external: false,
       },
       {
         title: "A Digital Assistant",
-        description: `A digital assistant built into a personal knowledge management system. 
-                Something I've been thinking about for a while. Think Samantha from the movie Her.
-                I really want to build this one completely.`,
+        description: `A digital assistant built into a personal knowledge management system. Think Samantha from the movie Her.`,
         link: "/experiments/digital-assistant",
         external: false,
       },
       {
         title: "Regex Visualiser",
-        description: `A tool for visualising the various stages of regex execution within a regex engine, 
-                including the NFA, AST, and Execution.`,
+        description: `Building a regex engine while visualising all the stages of regex matching.`,
         link: "https://regex.vis.prakharnagpal.com",
         external: true,
       },
@@ -33,22 +30,20 @@ export const homePageData: HomePageData = {
     items: [
       {
         title: "Plox",
-        description: `The Lox programming language (from the book "Crafting Interpreters") 
-                implemented using features from <code>python@3.13</code>.
-                Mostly the generics, and type annotations that are so much nicer in the latest version.`,
+        description: `The Lox programming language (from the book "Crafting Interpreters") in <code>python@3.13</code>.`,
         link: "/projects/plox",
         external: false,
       },
       {
         title: "Advent of Code 2024",
-        description: `Learning Rust by solving Advent of Code 2024 in it. It's a great language, definitely recommend trying it out.`,
+        description: `Learning Rust by solving Advent of Code, 2024 in it.`,
         link: "/projects/aoc24",
         external: false,
       },
       {
         title: "EEG Controlled Wheelchair",
-        description: `As part of the Neurotech society at Imperial I'm working on a Level 2 self-driving wheelchair 
-                (SLAM algorithm) that can be controlled via an EEG headset worn by the rider.`,
+        description: `As part of the Neurotech society at Imperial I'm working on a Level 2 self-driving wheelchair
+        that is controlled via an EEG headset worn by the user.`,
         link: "https://github.com/ICL-Neurotech/",
         external: true,
       },
@@ -60,16 +55,14 @@ export const homePageData: HomePageData = {
     items: [
       {
         title: "Learning about design as an engineer",
-        description: `A few thoughts on how I approach design, and how reading 
-				"The Design of Everyday Things" has changed the way I think about it.`,
+        description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
         link: "/writing/design-of-everyday-things",
         external: false,
       },
       {
         title: `Finding purpose in strange places`,
-        description: `I recently found direction and strong purpose for my life, 
-				and it came from <i>attending a society meeting at university</i>. 
-				A bit of a longer one this one`,
+        description: `A longer piece about finding purpose in strange places. 
+        Quite personal, and something I'm quite proud of sharing.`,
         link: "/writing/purpose-in-life",
         external: false,
       },
@@ -88,9 +81,14 @@ export const homePageData: HomePageData = {
       },
       {
         title: "Dump",
-        description: `My favorite spots on the internet. Basically a giant bookmark room, and the basis of the idea
-        for the personal digital assistant I'm working on. All of us have one of these that `,
+        description: `My favorite spots on the internet. Basically a giant bookmark dump.`,
         link: "/dump",
+        external: false,
+      },
+      {
+        title: "Music",
+        description: `Some of my favorite artists and bands. Also a list of vinyls I own/would love to own someday.`,
+        link: "/dump/music",
         external: false,
       },
     ],

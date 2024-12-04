@@ -1,0 +1,23 @@
+---
+import "../app.css";
+import { ClientRouter } from "astro:transitions";
+import Analytics from '@vercel/analytics/astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.svg" />
+		<ClientRouter transition:animate="fade" />
+		<title>Prakhar Nagpal | Slightlybelowzen</title>
+	</head>
+	<body>
+		<main class="max-w-3xl mx-auto md:py-20 py-10 px-4 flex flex-col gap-4">
+			<slot />
+			<Analytics />
+		</main>
+	</body>
+</html>
