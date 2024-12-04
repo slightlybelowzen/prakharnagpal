@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* all the resets to get rid of unecessary styles loaded by tailwind */
+  --color-*: initial;
+  /* --font-size-*: initial;
+	--line-height-*: initial; */
+  --default-font-family-*: initial;
+  --animate-*: initial;
+  --drop-shadow-*: initial;
+  --blur-*: initial;
+  --default-*: initial;
+  --perspective-*: initial;
+  /* --leading-*: initial; */
+  --ease-*: initial;
+  --inset-shadow-*: initial;
+  --transition-timing-function-*: initial;
+  /* --text-*: initial; */
+  --shadow-*: initial;
+
+  /* new variables */
+  --leading-base: 1.4;
+  --text-base: 1.025rem;
+
+  /* colors */
+  --color-selection-white: #008cff;
+  --color-white: #fff;
+  --color-text: #474645;
+  --color-selection-blue: #d8ecfc;
+  --color-app-green: #34c759;
+  --color-app-gray: #747484;
+  --color-app-blue: #018dff;
+  --color-app-pink: #f966ac;
+  --color-graphic-green: #44c67f;
+  --color-graphic-blue: #7dc4ff;
+  --color-graphic-blue-alt: #4dafff;
+  --color-graphic-blue-pale: #8eccff;
+  --color-graphic-blue-pale-alt: #6dbdff;
+  --color-graphic-purple: #5f5de7;
+  --color-graphic-yellow: #ffcf7b;
+  --color-graphic-gold: #f5b442;
+  --color-graphic-gold-alt: #ffa620;
+  --color-graphic-yellow-pale: #f6f4ef;
+  --color-graphic-black: #343433;
+  --color-graphic-gray: #e2d6c5;
+  --color-graphic-stone: #f2ebe0;
+  --color-graphic-orange: #ff5310;
+  --color-graphic-outline: #b2a79a;
+  --color-pocket: #52cb58;
+  --color-heading: #343433;
+  --color-body: #494440;
+  --color-body-muted: #848281;
+  --color-gray: #747484;
+  --color-gray-light: #f2f0ed;
+  --color-beige: #fbfaf9;
+  --color-beige-dark: #eaeaea;
+  --color-focus: #848281;
+  --color-white: #ffffff;
+  --color-blue: #3784f4;
+  --color-blue-light: #eefbfd;
+  --color-green: #44c67f;
+  --color-yellow: #ffbe4c;
+  --color-gold: #ca9230;
+  --color-orange: #ff5310;
+  --color-orange-dark: #ff2b00;
+  --color-red: #ef4444;
+  --color-purple: #9553f9;
+  --color-twitter-blue: #343433;
+  --shadow-code: inset 0 0 0 1px #e8e8e8;
+
+  /* fonts */
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-base leading-base bg-white text-text;
+  }
+  a {
+    @apply text-blue decoration-blue-light underline underline-offset-3 transition-all hover:decoration-selection-blue hover:decoration-2 duration-200;
+  }
+  h1,
+  h2 {
+    @apply text-sm uppercase underline-offset-2 underline font-mono text-graphic-black;
+  }
+  ul {
+    @apply list-disc list-inside flex flex-col gap-2;
+  }
+  code {
+    @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+@layer components {
+  .stack {
+    @apply flex flex-col gap-4;
+  }
+}
