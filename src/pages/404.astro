@@ -1,0 +1,13 @@
+---
+const { pathname } = Astro.url;
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1>404</h1>
+  <p>
+    Nope, I couldn't find <code>{pathname}</code>. Maybe you should head back
+    <a href="/">home</a>. It's possible I'm still working on it and haven't
+    published it yet.
+  </p>
+</Layout>
