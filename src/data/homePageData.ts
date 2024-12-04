@@ -9,13 +9,13 @@ export const homePageData: HomePageData = {
         title: "Tatem's scroll animations",
         description: `Recreating some beautiful animations on the Tatem website.`,
         link: "/experiments/tatem",
-        external: true,
+        external: false,
       },
       {
         title: "A Digital Assistant",
         description: `A digital assistant built into a personal knowledge management system. 
                 Something I've been thinking about for a while. Think Samantha from the movie Her.
-                Will eventually get around to actually building it completely.`,
+                I really want to build this one completely.`,
         link: "https://noto.prakharnagpal.com",
         external: true,
       },
@@ -76,7 +76,8 @@ export const homePageData: HomePageData = {
     ],
   },
   "everything else": {
-    description: `Photos, links, short notes, things I use everyday, places I draw inspiration from.`,
+    description: `Photos, links, favorite artists, recipes, short notes, 
+    things I use everyday, places I draw inspiration from. <i>Who I am, what I like, what I do.</i>`,
     items: [
       {
         title: "Photos",

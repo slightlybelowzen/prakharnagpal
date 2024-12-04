@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { homePageData } from "../data/homePageData";
+import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
 ---
 
 <Layout>
@@ -24,6 +25,11 @@ import { homePageData } from "../data/homePageData";
         The Design of Everyday Things
       </a>
     </p>
+    <p>
+      Outside of work and school, I love playing badminton, running (I recently ran my first 5K), listening to all sorts of music 
+      (I've listed down my favorite artists and bands <a href="/dump/music">here</a>), cooking 
+      (favorite recipes and food stories <a href="/dump/food">here</a>), walking and cycling around London (I might add a Strava integration here soon).
+    </p>
   </section>
   <section class="mt-4 grid md:grid-cols-2 grid-cols-1 gap-8">
     {Object.entries(homePageData).map(([key, value]) => (
@@ -34,7 +40,7 @@ import { homePageData } from "../data/homePageData";
           {value.items.map((item) => (
             <li>
               <p>
-                <a href={item.link}>{item.title}</a>: <span set:html={item.description} />
+                <a href={item.link}>{item.title} {item.external && <ArrowUpRight class="inline w-4 h-4 -ml-1 mb-0.5" />}</a>: <span set:html={item.description} />
               </p>
             </li>
           ))}
