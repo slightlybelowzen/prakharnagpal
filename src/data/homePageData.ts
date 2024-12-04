@@ -16,11 +16,11 @@ export const homePageData: HomePageData = {
         description: `A digital assistant built into a personal knowledge management system. 
                 Something I've been thinking about for a while. Think Samantha from the movie Her.
                 I really want to build this one completely.`,
-        link: "https://noto.prakharnagpal.com",
-        external: true,
+        link: "/experiments/digital-assistant",
+        external: false,
       },
       {
-        title: "RegexVis",
+        title: "Regex Visualiser",
         description: `A tool for visualising the various stages of regex execution within a regex engine, 
                 including the NFA, AST, and Execution.`,
         link: "https://regex.vis.prakharnagpal.com",
@@ -36,8 +36,14 @@ export const homePageData: HomePageData = {
         description: `The Lox programming language (from the book "Crafting Interpreters") 
                 implemented using features from <code>python@3.13</code>.
                 Mostly the generics, and type annotations that are so much nicer in the latest version.`,
-        link: "https://github.com/slightlybelowzen/plox",
-        external: true,
+        link: "/projects/plox",
+        external: false,
+      },
+      {
+        title: "Advent of Code 2024",
+        description: `Learning Rust by solving Advent of Code 2024 in it. It's a great language, definitely recommend trying it out.`,
+        link: "/projects/aoc24",
+        external: false,
       },
       {
         title: "EEG Controlled Wheelchair",
@@ -45,12 +51,6 @@ export const homePageData: HomePageData = {
                 (SLAM algorithm) that can be controlled via an EEG headset worn by the rider.`,
         link: "https://github.com/ICL-Neurotech/",
         external: true,
-      },
-      {
-        title: "Advent of Code 2024",
-        description: `Learning Rust by solving Advent of Code 2024 in it.`,
-        link: "/projects/aoc24",
-        external: false,
       },
     ],
   },

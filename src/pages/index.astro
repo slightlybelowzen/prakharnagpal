@@ -40,7 +40,9 @@ import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
           {value.items.map((item) => (
             <li>
               <p>
-                <a href={item.link}>{item.title} {item.external && <ArrowUpRight class="inline w-4 h-4 -ml-1 mb-0.5" />}</a>: <span set:html={item.description} />
+                <a href={item.link}>
+                  {item.title}{item.external && <ArrowUpRight class="inline w-4 h-4 -ml-1 mb-0.5" />}</a>: 
+                <span set:html={item.description} />
               </p>
             </li>
           ))}
