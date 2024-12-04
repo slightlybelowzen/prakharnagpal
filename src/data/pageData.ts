@@ -1,4 +1,4 @@
-import type { HomePageData } from "../types/pageData";
+import type { HomePageData } from "../types/homePageData";
 
 export const homePageData: HomePageData = {
   experiments: {

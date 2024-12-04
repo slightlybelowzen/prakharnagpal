@@ -1,45 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { homePageData } from '../data/pageData';
+import Layout from "../layouts/Layout.astro";
+import { homePageData } from "../data/pageData";
 ---
 
 <Layout>
-	<section class="stack">
-		<h1>A quick introduction</h1>
-		<p>
-			Hiya peeps, I'm Prakhar Nagpal! I'm a final year Computing student at Imperial College London
-			working on completing my thesis. I'm developing a way to transparently migrate distributed
-			applications hosted on a new serverless runtime,
-			<a href="https://github.com/faasm/faasm">Faasm</a>. I took a year off to work as a software
-			engineer at a company working on building a testing and tooling platform for self-driving cars.
-		</p>
-		<p>
-			I enjoy working on projects involving compilers, operating systems, databases, distributed
-			systems, and hacking on emulators/assemblers. I love learning about programming language design
-			and type theory. Recently I've gotten into building web applications and design. In the free
-			time I carve out, I'm working through all the books recommended at
-			<a href="https://teachyourselfcs.com">Teach Yourself Computer Science</a>, and I just recently
-			picked up
-			<a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">
-				The Design of Everyday Things.
-			</a>
-		</p>
-	</section>
-	<section class="mt-4 grid md:grid-cols-2 grid-cols-1 gap-8">
-		{Object.entries(homePageData).map(([key, value]) => (
-			<div class="stack">
-				<h2>{key}</h2>
-				<p>{value.description}</p>
-				<ul>
-					{value.items.map((item) => (
-						<li>
-							<p>
-								<a href={item.link}>{item.title}</a>: {item.description}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-		))}
-	</section>
+  <section class="stack">
+    <h1>A quick introduction</h1>
+    <p>
+      Hiya peeps, I'm Prakhar Nagpal! I'm a final year Computing student at Imperial
+      College London working on completing my thesis. I'm developing a way to
+      transparently migrate distributed applications hosted on a new serverless
+      runtime, <a href="https://github.com/faasm/faasm">Faasm</a>. I took a year off to work as a software
+      engineer at a company working on building a testing and tooling platform for self-driving
+      cars.
+    </p>
+    <p>
+      I enjoy working on projects involving compilers, operating systems, databases, distributed
+      systems, and hacking on emulators/assemblers. I love learning about programming language
+      design and type theory. Recently I've gotten into building web applications and design. In the
+      free time I'm working through all the books recommended at
+      <a href="https://teachyourselfcs.com">Teach Yourself Computer Science</a>, and I just recently
+      picked up <a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">
+        The Design of Everyday Things
+      </a>
+    </p>
+  </section>
+  <section class="mt-4 grid md:grid-cols-2 grid-cols-1 gap-8">
+    {Object.entries(homePageData).map(([key, value]) => (
+      <div class="stack">
+        <h2>{key}</h2>
+        <p>{value.description}</p>
+        <ul>
+          {value.items.map((item) => (
+            <li>
+              <p>
+                <a href={item.link}>{item.title}</a>: {item.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
 </Layout>
