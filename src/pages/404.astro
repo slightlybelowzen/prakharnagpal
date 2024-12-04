@@ -2,13 +2,14 @@
 const { pathname } = Astro.url;
 console.log(pathname);
 import Layout from "../layouts/Layout.astro";
+import ArrowUpLeft from "../assets/icons/arrow-up-left.svg";
 ---
 
 <Layout>
   <h1>404</h1>
   <p>
     Nope, I couldn't find <code>{pathname}</code>. Maybe you should head back
-    <a href="/">home</a>. It's possible I'm still working on it and haven't
+    <a href="/"><ArrowUpLeft class="inline w-4 h-4 mb-1 mr-0.5" />home</a>. It's possible I'm still working on it and haven't
     published it yet.
   </p>
 </Layout>
