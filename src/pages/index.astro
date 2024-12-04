@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { homePageData } from "../data/pageData";
+import { homePageData } from "../data/homePageData";
 ---
 
 <Layout>
@@ -29,12 +29,12 @@ import { homePageData } from "../data/pageData";
     {Object.entries(homePageData).map(([key, value]) => (
       <div class="stack">
         <h2>{key}</h2>
-        <p>{value.description}</p>
+        <p set:html={value.description} />
         <ul>
           {value.items.map((item) => (
             <li>
               <p>
-                <a href={item.link}>{item.title}</a>: {item.description}
+                <a href={item.link}>{item.title}</a>: <span set:html={item.description} />
               </p>
             </li>
           ))}

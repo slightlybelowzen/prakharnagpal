@@ -1,5 +1,6 @@
 ---
 import "../app.css";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -8,6 +9,8 @@ import "../app.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.svg" />
+		<ClientRouter transition:animate="fade" />
 		<title>Prakhar Nagpal | Slightlybelowzen</title>
 	</head>
 	<body>

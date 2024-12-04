@@ -77,6 +77,21 @@ export const homePageData: HomePageData = {
   },
   "everything else": {
     description: `Photos, links, short notes, things I use everyday, places I draw inspiration from.`,
-    items: [],
+    items: [
+      {
+        title: "Photos",
+        description: `Some of my favorite photos since I've moved to London. Trying to be more regular with this habit.
+        Really helps me see the city in a way that I might not otherwise.`,
+        link: "/photos",
+        external: false,
+      },
+      {
+        title: "Dump",
+        description: `My favorite spots on the internet. Basically a giant bookmark room, and the basis of the idea
+        for the personal digital assistant I'm working on. All of us have one of these that `,
+        link: "/dump",
+        external: false,
+      },
+    ],
   },
 };
