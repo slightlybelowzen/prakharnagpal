@@ -75,4 +75,8 @@ export const homePageData: HomePageData = {
       },
     ],
   },
+  "everything else": {
+    description: `Photos, links, short notes, things I use everyday, places I draw inspiration from.`,
+    items: [],
+  },
 };
