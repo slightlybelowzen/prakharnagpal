@@ -91,6 +91,9 @@
   code {
     @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code;
   }
+  pre > code {
+    @apply font-mono text-sm bg-transparent px-1 py-0.5 rounded-md shadow-transparent;
+  }
   ::-webkit-scrollbar-track {
     background-color: transparent;
   }

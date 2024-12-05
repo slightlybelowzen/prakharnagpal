@@ -1,0 +1,38 @@
+---
+layout: "../../layouts/ContentLayout.astro"
+date: "2024-12-01"
+title: "Advent of Code 2024"
+category: "Rust"
+---
+
+It's that time of the year again. Picking up a new language and solving some fun problems.
+Here's my solutions to [Advent of Code 2024](https://adventofcode.com/2024) in Rust.
+
+{/* TODO: Something like a collapsible component to show the solutions, or a grid not sure? */}
+
+```rust
+use std::collections::HashMap;
+
+pub fn distance_between_lists(list1: &mut [i32], list2: &mut [i32]) -> i32 {
+    list1.sort();
+    list2.sort();
+    let it = list1.iter().zip(list2.iter());
+    it.map(|(l, r)| (l - r).abs()).sum()
+}
+
+pub fn similarity_score(list1: &[i32], list2: &[i32]) -> i32 {
+    let mut ans = 0;
+    let mut left: HashMap<i32, i32> = HashMap::new();
+    let mut right: HashMap<i32, i32> = HashMap::new();
+    for (l, r) in list1.iter().zip(list2.iter()) {
+        let lval = left.entry(*l).or_insert(0);
+        let rval = right.entry(*r).or_insert(0);
+        *lval += 1;
+        *rval += 1;
+    }
+    for (val, count) in left {
+        ans += right.get(&val).unwrap_or_else(|| &0) * val * count;
+    }
+    ans
+}
+```

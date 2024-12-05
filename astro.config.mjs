@@ -7,7 +7,12 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
-  integrations: [mdx(), react()],
+  integrations: [
+    mdx({
+      shikiConfig: { theme: "github-light" },
+    }),
+    react(),
+  ],
   devToolbar: {
     enabled: false,
   },
