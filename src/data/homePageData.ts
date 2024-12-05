@@ -70,12 +70,12 @@ export const homePageData: HomePageData = {
   },
   "everything else": {
     description: `Photos, links, favorite artists, recipes, short notes, 
-    things I use everyday, places I draw inspiration from. <i>Who I am, what I like, what I do.</i>`,
+    things I use everyday, places I draw inspiration from.`,
     items: [
       {
         title: "Photos",
-        description: `Some of my favorite photos since I've moved to London. Trying to be more regular with this habit.
-        Really helps me see the city in a way that I might not otherwise.`,
+        description: `My favorite photos. Trying to be more regular, 
+        helps me see the city in a completely different way.`,
         link: "/photos",
         external: false,
       },

@@ -20,6 +20,7 @@
 
   /* new variables */
   --leading-base: 1.4;
+  --leading-base-screen-small: 1.5;
   --text-base: 1.025rem;
 
   /* colors */
@@ -75,7 +76,7 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-base leading-base bg-white text-text;
+    @apply font-sans antialiased text-base md:leading-base leading-base-screen-small bg-white text-text;
   }
   a {
     @apply text-blue decoration-blue-light underline underline-offset-3 transition-all hover:decoration-selection-blue hover:decoration-2 duration-200;
