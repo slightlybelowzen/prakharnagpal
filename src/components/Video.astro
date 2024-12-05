@@ -1,0 +1,18 @@
+---
+import { getCldVideoUrl } from 'astro-cloudinary/helpers';
+const { src } = Astro.props;
+const url = getCldVideoUrl({ src: src })
+---
+
+<div class="rounded-lg border border-beige-dark aspect-video">
+    <video
+        src={url}
+        muted
+        playsinline
+        autoplay
+        loop
+    >
+        <source src={url} type="video/mp4" />
+        <source src={url} type="video/webm" />
+    </video>
+</div>
