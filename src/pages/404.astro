@@ -5,10 +5,15 @@ import ArrowUpLeft from "../assets/icons/arrow-up-left.svg";
 ---
 
 <Layout>
-  <h1>404</h1>
+  <div class="flex gap-2 items-center">
+    <a href="/" class="text-body-muted hover:text-body no-underline">
+      <ArrowUpLeft class="inline w-4 h-4 mb-1" />
+    </a>
+    <h1>404</h1>
+  </div>
   <p>
     Nope, I couldn't find <code>{pathname}</code>. Maybe you should head back
-    <a href="/"><ArrowUpLeft class="inline w-4 h-4 mb-1 mr-0.5" />home</a>. It's possible I'm still working on it and haven't
+    <a href="/">home</a>. It's possible I'm still working on it and haven't
     published it yet.
   </p>
 </Layout>
