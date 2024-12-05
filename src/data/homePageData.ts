@@ -49,48 +49,48 @@ export const homePageData: HomePageData = {
       },
     ],
   },
-  // writing: {
-  //   description: `I write infrequently. I'm working on it, I promise.
-  // 	For now, here's some stuff I've written in the past.`,
-  //   items: [
-  //     {
-  //       title: "Learning about design as an engineer",
-  //       description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
-  //       link: "/writing/design-of-everyday-things",
-  //       external: false,
-  //     },
-  //     {
-  //       title: `Finding purpose in strange places`,
-  //       description: `A longer piece about finding purpose in strange places.
-  //       Quite personal, and something I'm quite proud of sharing.`,
-  //       link: "/writing/purpose-in-life",
-  //       external: false,
-  //     },
-  //   ],
-  // },
-  // "everything else": {
-  //   description: `Photos, links, favorite artists, recipes, short notes,
-  //   things I use everyday, places I draw inspiration from.`,
-  //   items: [
-  //     {
-  //       title: "Photos",
-  //       description: `My favorite photos. Trying to be more regular,
-  //       helps me see the city in a completely different way.`,
-  //       link: "/photos",
-  //       external: false,
-  //     },
-  //     {
-  //       title: "Dump",
-  //       description: `My favorite spots on the internet. Basically a giant bookmark dump.`,
-  //       link: "/dump",
-  //       external: false,
-  //     },
-  //     {
-  //       title: "Music",
-  //       description: `Some of my favorite artists and bands. Also a list of vinyls I own/would love to own someday.`,
-  //       link: "/dump/music",
-  //       external: false,
-  //     },
-  //   ],
-  // },
+  writing: {
+    description: `I write infrequently. I'm working on it, I promise.
+  	For now, here's some stuff I've written in the past.`,
+    items: [
+      {
+        title: "Learning about design as an engineer",
+        description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
+        link: "/writing/design-of-everyday-things",
+        external: false,
+      },
+      {
+        title: `Finding purpose in strange places`,
+        description: `A longer piece about finding purpose in strange places.
+        Quite personal, and something I'm quite proud of sharing.`,
+        link: "/writing/purpose-in-life",
+        external: false,
+      },
+    ],
+  },
+  "everything else": {
+    description: `Photos, links, favorite artists, recipes, short notes,
+    things I use everyday, places I draw inspiration from.`,
+    items: [
+      {
+        title: "Photos",
+        description: `My favorite photos. Trying to be more regular,
+        helps me see the city in a completely different way.`,
+        link: "/photos",
+        external: false,
+      },
+      {
+        title: "Dump",
+        description: `My favorite spots on the internet. Basically a giant bookmark dump.`,
+        link: "/dump",
+        external: false,
+      },
+      {
+        title: "Music",
+        description: `Some of my favorite artists and bands. Also a list of vinyls I own/would love to own someday.`,
+        link: "/dump/music",
+        external: false,
+      },
+    ],
+  },
 };

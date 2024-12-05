@@ -36,7 +36,7 @@ import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
     {Object.entries(homePageData).map(([key, value]) => (
       <div class="stack">
         <h2>{key}</h2>
-        <p set:html={value.description} />
+        {/* <p set:html={value.description} /> */}
         <ul>
           {value.items.map((item) => (
             <li>
