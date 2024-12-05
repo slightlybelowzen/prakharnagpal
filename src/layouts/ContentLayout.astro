@@ -1,7 +1,6 @@
 ---
 import "../app.css";
 import { ClientRouter } from "astro:transitions";
-import Analytics from '@vercel/analytics/astro'
 const { frontmatter } = Astro.props;
 const { title, category, date } = frontmatter;
 const formattedDate = new Date(date).toLocaleDateString("en-GB", {
@@ -35,7 +34,6 @@ import ArrowUpLeft from "../assets/icons/arrow-up-left.svg";
 			<section class="stack">
 				<slot />
 			</section>
-			<Analytics />
 		</main>
 	</body>
 </html>
