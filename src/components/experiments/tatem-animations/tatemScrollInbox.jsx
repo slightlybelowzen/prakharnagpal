@@ -39,7 +39,7 @@ export default function TatemScrollInbox() {
   return (
     <div
       className={`group flex h-full w-full flex-row items-center justify-center gap-5 
-        rounded-lg bg-[#00000008] px-10 sm:min-h-[36vh] md:flex-col md:gap-0.5`}
+        rounded-lg bg-[#00000008] border border-beige-dark px-10 sm:min-h-[36vh] md:flex-col md:gap-0.5`}
     >
       <div className="relative flex flex-col gap-1">
         <div className="flex gap-5">

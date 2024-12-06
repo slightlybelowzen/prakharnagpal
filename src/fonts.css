@@ -6,15 +6,17 @@
 }
 
 @font-face {
-  font-family: "Geist Mono";
-  src: url("/GeistMono[wght].woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/IBMPlexMono-Italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Menlo";
-  src: url("/Menlo.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "IBM Plex Mono";
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/IBMPlexMono-Regular.woff2") format("woff2");
 }

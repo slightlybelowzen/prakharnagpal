@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { homePageData } from "../data/homePageData";
-import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
+// import { homePageData } from "../data/homePageData";
+// import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
+import PegBoard from "../components/pegboard";
 ---
 
 <!-- TODO: This is too much visual noise, make it clearer and quieter -->
 <Layout>
   <section class="stack">
-    <h1>A quick introduction</h1>
-    <p>
+    <h1>prakhar nagpal's pegboard</h1>
+    <!-- <p>
       Hiya peeps, I'm Prakhar Nagpal! I'm a final year Computing student at Imperial
       College London working on completing my thesis. I'm developing a way to
       transparently migrate distributed applications hosted on a new serverless
@@ -30,25 +31,9 @@ import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
       Outside of work and school, I love playing badminton, running (I recently ran my first 5K), listening to all sorts of music 
       (I've listed down my favorite artists and bands <a href="/dump/music">here</a>), cooking 
       (favorite recipes and food stories <a href="/dump/food">here</a>), walking and cycling around London (I might add a Strava integration here soon).
-    </p>
+  </p> -->
   </section>
-  <section class="mt-4 grid md:grid-cols-2 grid-cols-1 gap-8">
-    {Object.entries(homePageData).map(([key, value]) => (
-      <div class="stack">
-        <h2>{key}</h2>
-        {/* <p set:html={value.description} /> */}
-        <ul>
-          {value.items.map((item) => (
-            <li>
-              <p>
-                <a href={item.link}>
-                  {item.title}{item.external && <ArrowUpRight class="inline w-4 h-4 -ml-0.5 mb-0.5" />}</a>: 
-                <span set:html={item.description} />
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+  <section class="flex justify-center items-center">
+    <PegBoard />
   </section>
 </Layout>

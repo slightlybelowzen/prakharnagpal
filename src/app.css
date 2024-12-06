@@ -75,7 +75,7 @@
 
   /* fonts */
   --font-sans: "Geist", sans-serif;
-  --font-mono: "Menlo", ui-monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace;
 }
 
 @layer base {
@@ -91,6 +91,8 @@
   }
   ul {
     @apply list-disc list-inside flex flex-col gap-2;
+  }
+  li {
   }
   code {
     @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
