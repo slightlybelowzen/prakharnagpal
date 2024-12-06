@@ -100,8 +100,13 @@
     padding: 0 !important;
   }
   pre {
-    @apply border border-beige-dark px-3 py-2 rounded-md tracking-tight;
+    @apply border border-beige-dark px-2 py-1 rounded-md tracking-tight;
     background-color: var(--color-beige-alt) !important;
+    line-height: 1.1 !important;
+    ::selection {
+      background-color: var(--color-selection-blue);
+      color: var(--color-selection-white);
+    }
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;
