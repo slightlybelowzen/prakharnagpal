@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "fonts.css";
 
 @theme {
   /* all the resets to get rid of unecessary styles loaded by tailwind */
@@ -74,7 +75,7 @@
 
   /* fonts */
   --font-sans: "Geist", sans-serif;
-  --font-mono: "Geist Mono", ui-monospace;
+  --font-mono: "Menlo", ui-monospace;
 }
 
 @layer base {

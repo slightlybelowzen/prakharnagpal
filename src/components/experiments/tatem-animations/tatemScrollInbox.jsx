@@ -54,8 +54,8 @@ export default function TatemScrollInbox() {
             </div>
           ))}
         </div>
-        <div class="relative hidden h-0.5 w-full items-center overflow-hidden rounded-full bg-beige-dark md:block">
-          <div class="z-10 h-full w-full rounded bg-graphic-black duration-200 max-w-[11%]" />
+        <div className="relative hidden h-0.5 w-full items-center overflow-hidden rounded-full bg-beige-dark md:block">
+          <div className="z-10 h-full w-full rounded bg-graphic-black duration-200 max-w-[11%]" />
         </div>
       </div>
     </div>
