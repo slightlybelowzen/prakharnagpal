@@ -20,8 +20,8 @@ export const homePageData: HomePageData = {
       {
         title: "Regex Visualiser",
         description: `Building a regex engine while visualising all the stages of regex matching.`,
-        link: "https://regex.vis.prakharnagpal.com",
-        external: true,
+        link: "/experiments/regex-visualiser",
+        external: false,
       },
     ],
   },
@@ -44,8 +44,8 @@ export const homePageData: HomePageData = {
         title: "EEG Controlled Wheelchair",
         description: `As part of the Neurotech society at Imperial I'm working on a Level 2 self-driving wheelchair
         that is controlled via an EEG headset worn by the user.`,
-        link: "https://github.com/ICL-Neurotech/",
-        external: true,
+        link: "/projects/eeg-wheelchair",
+        external: false,
       },
     ],
   },

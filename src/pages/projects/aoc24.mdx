@@ -5,34 +5,25 @@ title: "Advent of Code 2024"
 category: "Rust"
 ---
 
+import { Code } from "astro:components";
+
 It's that time of the year again. Picking up a new language and solving some fun problems.
 Here's my solutions to [Advent of Code 2024](https://adventofcode.com/2024) in Rust.
 
 {/* TODO: Something like a collapsible component to show the solutions, or a grid not sure? */}
 
 ```rust
-use std::collections::HashMap;
+use std::ops::RangeInclusive;
 
-pub fn distance_between_lists(list1: &mut [i32], list2: &mut [i32]) -> i32 {
-    list1.sort();
-    list2.sort();
-    let it = list1.iter().zip(list2.iter());
-    it.map(|(l, r)| (l - r).abs()).sum()
-}
-
-pub fn similarity_score(list1: &[i32], list2: &[i32]) -> i32 {
-    let mut ans = 0;
-    let mut left: HashMap<i32, i32> = HashMap::new();
-    let mut right: HashMap<i32, i32> = HashMap::new();
-    for (l, r) in list1.iter().zip(list2.iter()) {
-        let lval = left.entry(*l).or_insert(0);
-        let rval = right.entry(*r).or_insert(0);
-        *lval += 1;
-        *rval += 1;
-    }
-    for (val, count) in left {
-        ans += right.get(&val).unwrap_or_else(|| &0) * val * count;
-    }
-    ans
+pub fn safe_level(levels: Vec<Vec<u32>>) -> usize {
+    levels.iter().filter(|level| {
+        let is_increasing = level.windows(2).all(|pair| pair[0] < pair[1]);
+        let is_decreasing = level.windows(2).all(|pair| pair[0] > pair[1]);
+        let valid_diff = level.windows(2).all(|pair| {
+            let diff = pair[0].abs_diff(pair[1]);
+            (1..=3).contains(&diff)
+        });
+        (is_increasing || is_decreasing) && valid_diff
+    }).count()
 }
 ```
