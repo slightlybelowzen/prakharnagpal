@@ -35,7 +35,7 @@
   --color-app-gray: #747484;
   --color-app-blue: #018dff;
   --color-app-pink: #f966ac;
-  --color-graphic-green: #44c67f;
+  /* --color-graphic-green: #44c67f;
   --color-graphic-blue: #7dc4ff;
   --color-graphic-blue-alt: #4dafff;
   --color-graphic-blue-pale: #8eccff;
@@ -44,13 +44,13 @@
   --color-graphic-yellow: #ffcf7b;
   --color-graphic-gold: #f5b442;
   --color-graphic-gold-alt: #ffa620;
-  --color-graphic-yellow-pale: #f6f4ef;
+  --color-graphic-yellow-pale: #f6f4ef; */
   --color-graphic-black: #343433;
   --color-graphic-gray: #e2d6c5;
-  --color-graphic-stone: #f2ebe0;
+  /* --color-graphic-stone: #f2ebe0;
   --color-graphic-orange: #ff5310;
   --color-graphic-outline: #b2a79a;
-  --color-pocket: #52cb58;
+  --color-pocket: #52cb58; */
   --color-heading: #343433;
   --color-body: #494440;
   --color-body-muted: #848281;
@@ -58,19 +58,20 @@
   --color-gray-light: #f2f0ed;
   --color-beige: #fbfaf9;
   --color-beige-alt: rgba(251, 250, 249, 0.4);
+  --color-beige-alt-dark: rgba(234, 234, 234, 0.5);
   --color-beige-dark: #eaeaea;
   --color-focus: #848281;
   --color-white: #ffffff;
   --color-blue: #3784f4;
   --color-blue-light: #eefbfd;
-  --color-green: #44c67f;
+  /* --color-green: #44c67f;
   --color-yellow: #ffbe4c;
   --color-gold: #ca9230;
   --color-orange: #ff5310;
   --color-orange-dark: #ff2b00;
   --color-red: #ef4444;
   --color-purple: #9553f9;
-  --color-twitter-blue: #343433;
+  --color-twitter-blue: #343433; */
   --shadow-code: inset 0 0 0 1px #e8e8e8;
 
   /* fonts */
@@ -80,22 +81,20 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-base md:leading-base leading-base-screen-small bg-white text-text;
+    @apply font-sans font-light text-base md:leading-base leading-base-screen-small bg-white text-text;
   }
   a {
     @apply text-blue decoration-blue-light underline underline-offset-3 transition-all hover:decoration-selection-blue hover:decoration-2 duration-200;
   }
   h1,
   h2 {
-    @apply text-sm uppercase underline-offset-2 underline font-mono text-graphic-black;
+    @apply text-sm font-normal antialiased uppercase underline-offset-2 underline font-mono text-graphic-black;
   }
   ul {
     @apply list-disc list-inside flex flex-col gap-2;
   }
-  li {
-  }
   code {
-    @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
+    @apply font-mono font-normal antialiased text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
   }
   pre > code {
     @apply bg-transparent tracking-tight font-mono text-sm shadow-transparent;
@@ -118,5 +117,27 @@
 @layer components {
   .stack {
     @apply flex flex-col gap-4;
+  }
+  .grid {
+    background-image: linear-gradient(
+        to right,
+        var(--color-beige-alt-dark) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        var(--color-beige-alt-dark) 1px,
+        transparent 1px
+      );
+  }
+  .grid-size-24 {
+    background-size: 24px 24px;
+  }
+  .grid-header {
+    background-image: linear-gradient(
+      45deg,
+      var(--color-beige-alt-dark) 1px,
+      transparent 1px
+    );
   }
 }
