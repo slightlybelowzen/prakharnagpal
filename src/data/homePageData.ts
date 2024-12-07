@@ -6,22 +6,22 @@ export const homePageData: HomePageData = [
     description: `Recreating some beautiful animations on the Tatem website.`,
     link: "/experiments/tatem-animations",
     external: false,
-    pos: `left-[20px] bottom-[10px]`,
+    pos: `left-[15rem] top-[30rem]`,
   },
-  {
-    title: "A Digital Assistant",
-    description: `A digital assistant built into a personal knowledge management system. Think Samantha from the movie Her.`,
-    link: "/experiments/digital-assistant",
-    external: false,
-    pos: `left-[120px] top-[80px]`,
-  },
-  {
-    title: "Regex Visualiser",
-    description: `Building a regex engine while visualising all the stages of regex matching.`,
-    link: "/experiments/regex-visualiser",
-    external: false,
-    pos: `left-[250px] top-[180px]`,
-  },
+  // {
+  //   title: "A Digital Assistant",
+  //   description: `A digital assistant built into a personal knowledge management system. Think Samantha from the movie Her.`,
+  //   link: "/experiments/digital-assistant",
+  //   external: false,
+  //   pos: `left-[20%] top-[20%]`,
+  // },
+  // {
+  //   title: "Regex Visualiser",
+  //   description: `Building a regex engine while visualising all the stages of regex matching.`,
+  //   link: "/experiments/regex-visualiser",
+  //   external: false,
+  //   pos: `left-[250px] top-[180px]`,
+  // },
   // {
   //   title: "Plox",
   //   description: `The Lox programming language (from the book "Crafting Interpreters") in <code>python@3.13</code>.`,
@@ -34,7 +34,7 @@ export const homePageData: HomePageData = [
     description: `Learning Rust by solving Advent of Code, 2024 in it.`,
     link: "/projects/aoc24",
     external: false,
-    pos: `bottom-[100px] right-[10px]`,
+    pos: `top-[100px] left-[10px]`,
   },
   // {
   //   title: "EEG Controlled Wheelchair",
@@ -44,21 +44,21 @@ export const homePageData: HomePageData = [
   //   external: false,
   //   pos: { left: 12, top: 12 },
   // },
-  // {
-  //   title: "Learning about design as an engineer",
-  //   description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
-  //   link: "/writing/design-of-everyday-things",
-  //   external: false,
-  //   pos: { left: 12, top: 12 },
-  // },
-  // {
-  //   title: `Finding purpose in strange places`,
-  //   description: `A longer piece about finding purpose in strange places.
-  //       Quite personal, and something I'm quite proud of sharing.`,
-  //   link: "/writing/purpose-in-life",
-  //   external: false,
-  //   pos: { left: 12, top: 12 },
-  // },
+  {
+    title: "Learning about design as an engineer",
+    description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
+    link: "/writing/design-of-everyday-things",
+    external: false,
+    pos: `top-[25rem] left-[1rem]`,
+  },
+  {
+    title: `Finding purpose in strange places`,
+    description: `A longer piece about finding purpose in strange places.
+        Quite personal, and something I'm quite proud of sharing.`,
+    link: "/writing/purpose-in-life",
+    external: false,
+    pos: `top-[20rem] left-[35rem]`,
+  },
   // {
   //   title: "Photos",
   //   description: `My favorite photos. Trying to be more regular,

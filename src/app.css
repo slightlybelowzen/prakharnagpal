@@ -22,7 +22,7 @@
   /* new variables */
   --leading-base: 1.4;
   --leading-base-screen-small: 1.5;
-  --text-base: 1.025rem;
+  --text-base: 0.925rem;
 
   --tracking-tight: -0.015em;
 
@@ -64,6 +64,8 @@
   --color-white: #ffffff;
   --color-blue: #3784f4;
   --color-blue-light: #eefbfd;
+  --color-selection-bg: #eceadf;
+  --color-selection-text: #201e13;
   /* --color-green: #44c67f;
   --color-yellow: #ffbe4c;
   --color-gold: #ca9230;
@@ -73,6 +75,7 @@
   --color-purple: #9553f9;
   --color-twitter-blue: #343433; */
   --shadow-code: inset 0 0 0 1px #e8e8e8;
+  --shadow-note: 4px 4px 0 #074dcf0f;
 
   /* fonts */
   --font-sans: "Geist", sans-serif;
@@ -109,8 +112,8 @@
       color: var(--color-selection-white);
     }
   }
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
+  ::selection {
+    @apply bg-selection-bg text-selection-text;
   }
 }
 
