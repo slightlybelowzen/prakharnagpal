@@ -105,7 +105,7 @@
     padding: 0 !important;
   }
   pre {
-    @apply border border-selection-blue/80 px-3 py-2 rounded-sm shadow-note tracking-tight;
+    @apply border border-beige-dark/80 px-3 py-2 rounded-sm shadow-board tracking-tight;
     background-color: var(--color-beige-alt) !important;
     line-height: 1.1 !important;
     ::selection {
@@ -113,9 +113,9 @@
       color: var(--color-selection-white);
     }
   }
-  ::selection {
-    @apply bg-selection-bg text-graphic-black;
-  }
+  /* ::selection {
+    @apply bg-selection-blue text-selection-white;
+  } */
 }
 
 @layer components {
