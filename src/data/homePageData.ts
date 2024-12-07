@@ -10,7 +10,7 @@ export const homePageData: HomePageData = [
   },
   {
     title: "A quick introduction",
-    description: `A small note covering everything you need to know about me!`,
+    description: `A small note to say hello!`,
     link: "/writing/introduction",
     external: false,
     pos: `left-[30rem] top-[5rem]`,
