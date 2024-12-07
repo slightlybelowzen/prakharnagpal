@@ -20,9 +20,9 @@
   --shadow-*: initial;
 
   /* new variables */
-  --leading-base: 1.4;
+  --leading-base: 1.35;
   --leading-base-screen-small: 1.5;
-  --text-base: 0.925rem;
+  --text-base: 1.015rem;
 
   --tracking-tight: -0.015em;
 
@@ -84,20 +84,20 @@
 
 @layer base {
   body {
-    @apply font-sans font-light text-base md:leading-base leading-base-screen-small bg-white text-text;
+    @apply font-sans antialiased text-base md:leading-base leading-base-screen-small bg-white text-text;
   }
   a {
     @apply text-blue decoration-blue-light underline underline-offset-3 transition-all hover:decoration-selection-blue hover:decoration-2 duration-200;
   }
   h1,
   h2 {
-    @apply text-sm font-normal antialiased uppercase underline-offset-2 underline font-mono text-graphic-black;
+    @apply text-sm uppercase underline-offset-2 underline font-mono text-graphic-black;
   }
   ul {
     @apply list-disc list-inside flex flex-col gap-2;
   }
   code {
-    @apply font-mono font-normal antialiased text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
+    @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
   }
   pre > code {
     @apply bg-transparent tracking-tight font-mono text-sm shadow-transparent;

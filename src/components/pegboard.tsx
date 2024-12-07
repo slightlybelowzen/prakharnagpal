@@ -19,7 +19,7 @@ function Note({
       className={`shadow-note absolute ${pos} border border-blue/15 bg-selection-blue/30 w-fit h-fit max-w-[15rem] px-4 py-2 flex justify-center items-center`}
     >
       <p className="flex flex-col gap-1">
-        <a href={link} className="font-mono">
+        <a href={link} className="font-mono text-xs uppercase">
           {title}
           {external && <ArrowUpRight class="inline w-4 h-4 -ml-0.5 mb-0.5" />}
         </a>
@@ -31,7 +31,8 @@ function Note({
 
 export default function PegBoard() {
   return (
-    <div className="overflow-hidden relative w-full h-full min-h-[72vh] bg-beige-alt/80 border border-beige-dark/50 rounded-sm">
+    // TODO: Make this work on mobile, with scroll and background showing for scroll area
+    <div className="overflow-hidden relative w-full h-full min-h-[72vh] bg-beige-alt/75 border-b border-r border-beige-dark/50 rounded-sm">
       <div className="absolute top-0 left-0 w-full h-20 grid-header grid-size-24" />
       <div className="overflow-hidden absolute h-full w-full grid grid-size-24" />
       <div className="relative h-full w-full">

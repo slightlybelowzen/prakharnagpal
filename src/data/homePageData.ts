@@ -8,6 +8,13 @@ export const homePageData: HomePageData = [
     external: false,
     pos: `left-[15rem] top-[30rem]`,
   },
+  {
+    title: "A quick introduction",
+    description: `A small note covering everything you need to know about me!`,
+    link: "/writing/introduction",
+    external: false,
+    pos: `left-[30rem] top-[5rem]`,
+  },
   // {
   //   title: "A Digital Assistant",
   //   description: `A digital assistant built into a personal knowledge management system. Think Samantha from the movie Her.`,
