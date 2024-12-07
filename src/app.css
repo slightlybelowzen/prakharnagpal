@@ -76,6 +76,7 @@
   --color-twitter-blue: #343433; */
   --shadow-code: inset 0 0 0 1px #e8e8e8;
   --shadow-note: 4px 4px 0 #074dcf0f;
+  --shadow-board: 5px 6px 0 var(--color-beige);
 
   /* fonts */
   --font-sans: "Geist", sans-serif;
@@ -91,7 +92,7 @@
   }
   h1,
   h2 {
-    @apply text-sm uppercase underline-offset-2 underline font-mono text-graphic-black;
+    @apply text-sm tracking-tight uppercase underline-offset-2 underline font-mono text-graphic-black;
   }
   ul {
     @apply list-disc list-inside flex flex-col gap-2;
@@ -104,7 +105,7 @@
     padding: 0 !important;
   }
   pre {
-    @apply border border-beige-dark px-2 py-1 rounded-md tracking-tight;
+    @apply border border-selection-blue/80 px-3 py-2 rounded-sm shadow-note tracking-tight;
     background-color: var(--color-beige-alt) !important;
     line-height: 1.1 !important;
     ::selection {
@@ -113,7 +114,7 @@
     }
   }
   ::selection {
-    @apply bg-selection-bg text-selection-text;
+    @apply bg-selection-bg text-graphic-black;
   }
 }
 
