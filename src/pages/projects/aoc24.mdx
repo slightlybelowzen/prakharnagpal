@@ -12,10 +12,53 @@ Here's my solutions to [Advent of Code 2024](https://adventofcode.com/2024) in R
 
 {/* TODO: Something like a collapsible component to show the solutions, or a grid not sure? */}
 
+## Day 1
+
+Pretty straightforward day, nothing too crazy. Mostly just getting familiar with the functional side of Rust.
+
+```rust
+use std::collections::HashMap;
+
+// part 1
+pub fn distance_between_lists(list1: &mut [i32], list2: &mut [i32]) -> i32 {
+    list1.sort();
+    list2.sort();
+    let it = list1.iter().zip(list2.iter());
+    it.map(|(l, r)| (l - r).abs()).sum()
+}
+
+// part 2
+pub fn similarity_score(list1: &[i32], list2: &[i32]) -> i32 {
+    let mut ans = 0;
+    let mut left: HashMap<i32, i32> = HashMap::new();
+    let mut right: HashMap<i32, i32> = HashMap::new();
+    for (l, r) in list1.iter().zip(list2.iter()) {
+        let lval = left.entry(*l).or_insert(0);
+        let rval = right.entry(*r).or_insert(0);
+        *lval += 1;
+        *rval += 1;
+    }
+    for (val, count) in left {
+        ans += right.get(&val).unwrap_or_else(|| &0) * val * count;
+    }
+    ans
+}
+```
+
+## Day 2
+
+This one was ridiculous. I spent about a day trying to figure out how to write part 2 in a
+way that was similar to part 1. I really like the way I managed to do part 1. Probably not
+the most efficient but it's immediately obvious what's going on. After a couple of hours of pulling
+my hair out, I finally gave up and just wrote something iterative. Still nice, just not as elegant
+as I'd have liked.
+
 ```rust
 use std::ops::RangeInclusive;
 
-pub fn safe_level(levels: Vec<Vec<u32>>) -> usize {
+// part 1
+// I really like this solution, it's probably not the most efficient but god is it pretty
+pub fn safe_level(levels: Vec<Vec<i32>>) -> usize {
     levels.iter().filter(|level| {
         let is_increasing = level.windows(2).all(|pair| pair[0] < pair[1]);
         let is_decreasing = level.windows(2).all(|pair| pair[0] > pair[1]);
@@ -25,5 +68,36 @@ pub fn safe_level(levels: Vec<Vec<u32>>) -> usize {
         });
         (is_increasing || is_decreasing) && valid_diff
     }).count()
+}
+
+// part 2
+pub fn safe_level_with_one_remove(levels: Vec<Vec<i32>>) -> usize {
+    let mut count = 0;
+    let increasing = 1..=3;
+    let decreasing = -3..=-1;
+    for level in levels {
+        let res = [is_safe(&level, &increasing, true),
+            is_safe(&level, &decreasing, true),
+            is_safe(&level[1..].to_vec(), &increasing, false),
+            is_safe(&level[1..].to_vec(), &decreasing, false)
+        ];
+        count += res.iter().any(|r| *r) as usize;
+    }
+    count
+}
+
+fn is_safe(level: &Vec<i32>, range: &RangeInclusive<i32>, mut allow_skip: bool) -> bool {
+    let mut prev = level[0];
+    for current in level.iter().skip(1) {
+        if range.contains(&(prev - current)) {
+            prev = *current;
+        } else if !allow_skip {
+            return false;
+        }
+        else {
+            allow_skip = false;
+        }
+    }
+    true
 }
 ```

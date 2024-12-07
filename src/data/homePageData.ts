@@ -6,14 +6,14 @@ export const homePageData: HomePageData = [
     description: `Recreating some beautiful animations on the Tatem website.`,
     link: "/experiments/tatem-animations",
     external: false,
-    pos: `left-[15rem] top-[30rem]`,
+    pos: `left-[25%] top-[30rem]`,
   },
   {
     title: "A quick introduction",
     description: `A small note to say hello!`,
     link: "/writing/introduction",
     external: false,
-    pos: `left-[30rem] top-[5rem]`,
+    pos: `left-[50%] top-[5rem]`,
   },
   // {
   //   title: "A Digital Assistant",
@@ -41,7 +41,7 @@ export const homePageData: HomePageData = [
     description: `Learning Rust by solving Advent of Code, 2024 in it.`,
     link: "/projects/aoc24",
     external: false,
-    pos: `top-[100px] left-[10px]`,
+    pos: `top-[100px] left-[1.5%]`,
   },
   {
     title: "EEG Controlled Wheelchair",
@@ -56,7 +56,7 @@ export const homePageData: HomePageData = [
     description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
     link: "/writing/design-of-everyday-things",
     external: false,
-    pos: `top-[25rem] left-[1rem]`,
+    pos: `top-[25rem] left-[1.5%]`,
   },
   {
     title: `Finding purpose in strange places`,
@@ -64,7 +64,7 @@ export const homePageData: HomePageData = [
         Quite personal, and something I'm quite proud of sharing.`,
     link: "/writing/purpose-in-life",
     external: false,
-    pos: `top-[20rem] left-[35rem]`,
+    pos: `top-[20rem] left-[60%]`,
   },
   // {
   //   title: "Photos",
