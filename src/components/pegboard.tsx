@@ -35,23 +35,16 @@ export default function PegBoard() {
       <div className="absolute top-0 left-0 w-full h-20 grid-header grid-size-24" />
       <div className="overflow-hidden absolute h-full w-full grid grid-size-24" />
       <div className="relative h-full w-full">
-        <Note
-          pos={{ left: 0, top: 0 }}
-          title="Hello"
-          description="World"
-          external={false}
-          link="#"
-        />
-        {/* {homePageData.map((note) => (
+        {homePageData.map((note) => (
           <Note
             key={note.title}
-            pos={{ left: getRandomInt(0, 100), top: getRandomInt(0, 100) }}
+            pos={{ left: 0, top: 0 }}
             title={note.title}
             description={note.description}
             external={note.external}
             link={note.link}
           />
-        ))} */}
+        ))}
       </div>
     </div>
   );
