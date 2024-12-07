@@ -43,14 +43,14 @@ export const homePageData: HomePageData = [
     external: false,
     pos: `top-[100px] left-[10px]`,
   },
-  // {
-  //   title: "EEG Controlled Wheelchair",
-  //   description: `As part of the Neurotech society at Imperial I'm working on a Level 2 self-driving wheelchair
-  //       that is controlled via an EEG headset worn by the user.`,
-  //   link: "/projects/eeg-wheelchair",
-  //   external: false,
-  //   pos: { left: 12, top: 12 },
-  // },
+  {
+    title: "EEG Controlled Wheelchair",
+    description: `As part of the Neurotech society at Imperial I'm working on a
+    level 2 self-driving wheelchair controlled via an EEG headset.`,
+    link: "/projects/eeg-wheelchair",
+    external: false,
+    pos: `top-[7.5rem] left-[70%]`,
+  },
   {
     title: "Learning about design as an engineer",
     description: `How reading "The Design of Everyday Things" has changed the way I think about design.`,
