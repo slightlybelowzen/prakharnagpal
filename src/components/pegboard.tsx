@@ -12,18 +12,18 @@ function Note({
   description: string;
   link: string;
   external: boolean;
-  pos: { left: number; top: number };
+  pos: string;
 }) {
   return (
     <div
-      className={`absolute text-sm bg-selection-blue/40 w-fit h-fit px-4 py-2 flex justify-center items-center`}
+      className={`absolute ${pos} border border-blue/15 text-sm bg-selection-blue/30 w-fit h-fit max-w-[14rem] px-4 py-2 flex justify-center items-center`}
     >
-      <p>
+      <p className="flex flex-col gap-1">
         <a href={link} className="font-mono">
           {title}
           {external && <ArrowUpRight class="inline w-4 h-4 -ml-0.5 mb-0.5" />}
         </a>
-        <span className="block">{description}</span>
+        <span className="block font-sans mx-auto">{description}</span>
       </p>
     </div>
   );
@@ -38,7 +38,7 @@ export default function PegBoard() {
         {homePageData.map((note) => (
           <Note
             key={note.title}
-            pos={{ left: 0, top: 0 }}
+            pos={note.pos}
             title={note.title}
             description={note.description}
             external={note.external}

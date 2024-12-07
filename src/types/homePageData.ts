@@ -3,4 +3,5 @@ export type HomePageData = {
   description: string;
   link: string;
   external: boolean;
+  pos: string;
 }[];
