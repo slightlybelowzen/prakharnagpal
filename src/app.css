@@ -105,14 +105,14 @@
     padding: 0 !important;
   }
   pre {
-    @apply border border-beige-dark/80 px-3 py-2 tracking-tighter rounded-sm shadow-board tracking-tight;
+    @apply border border-beige-dark/80 px-3 py-2 tracking-tighter shadow-board tracking-tight;
     font-variant-ligatures: common-ligatures;
     background-color: var(--color-beige-alt) !important;
     line-height: 1.1 !important;
-    ::selection {
+    /* ::selection {
       background-color: var(--color-selection-blue);
       color: var(--color-selection-white);
-    }
+    } */
   }
   /* ::selection {
     @apply bg-selection-blue text-selection-white;
