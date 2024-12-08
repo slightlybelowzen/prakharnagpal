@@ -101,3 +101,29 @@ fn is_safe(level: &Vec<i32>, range: &RangeInclusive<i32>, mut allow_skip: bool) 
     true
 }
 ```
+
+## Day 3
+
+Quite straightforward. Just some regex and string manipulation.
+
+```rust
+use regex::Regex;
+
+pub fn identify_multiply(input: &str) -> u32 {
+    let mul = Regex::new(r"(mul\(\d+,\d+\))|(do\(\)|don't\(\))").unwrap();
+    let mut enabled = true;
+    let mut result = 0;
+    for (_, [capture]) in mul.captures_iter(input).map(|c| c.extract()) {
+        match capture.starts_with("mul") {
+            true => {
+                if enabled {
+                    let (num1, num2) = capture[4..7].split_once(',').unwrap();
+                    result += num1.parse::<u32>().unwrap() * num2.parse::<u32>().unwrap();
+                }
+            }
+            false => enabled = capture == "do()"
+        }
+    }
+    result
+}
+```
