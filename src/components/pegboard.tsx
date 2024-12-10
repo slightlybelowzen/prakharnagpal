@@ -21,7 +21,7 @@ function Note({
       <p className="flex flex-col gap-1">
         <a
           href={link}
-          className="font-heading leading-base text-xs font-medium uppercase"
+          className="font-heading leading-base text-xs font-light uppercase"
         >
           {title}
           {external && <ArrowUpRight class="inline w-4 h-4 -ml-0.5 mb-0.5" />}
