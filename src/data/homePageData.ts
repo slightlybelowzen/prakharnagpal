@@ -44,7 +44,7 @@ export const homePageData: HomePageData = [
     pos: `top-[100px] left-[1.5%]`,
   },
   {
-    title: "EEG Controlled Wheelchair",
+    title: "EEG Headset Controlled Wheelchair",
     description: `As part of the Neurotech society at Imperial I'm working on a
     level 2 self-driving wheelchair controlled via an EEG headset.`,
     link: "/projects/eeg-wheelchair",

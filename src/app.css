@@ -35,22 +35,8 @@
   --color-app-gray: #747484;
   --color-app-blue: #018dff;
   --color-app-pink: #f966ac;
-  /* --color-graphic-green: #44c67f;
-  --color-graphic-blue: #7dc4ff;
-  --color-graphic-blue-alt: #4dafff;
-  --color-graphic-blue-pale: #8eccff;
-  --color-graphic-blue-pale-alt: #6dbdff;
-  --color-graphic-purple: #5f5de7;
-  --color-graphic-yellow: #ffcf7b;
-  --color-graphic-gold: #f5b442;
-  --color-graphic-gold-alt: #ffa620;
-  --color-graphic-yellow-pale: #f6f4ef; */
   --color-graphic-black: #343433;
   --color-graphic-gray: #e2d6c5;
-  /* --color-graphic-stone: #f2ebe0;
-  --color-graphic-orange: #ff5310;
-  --color-graphic-outline: #b2a79a;
-  --color-pocket: #52cb58; */
   --color-heading: #343433;
   --color-body: #494440;
   --color-body-muted: #848281;
@@ -66,14 +52,6 @@
   --color-blue-light: #eefbfd;
   --color-selection-bg: #eceadf;
   --color-selection-text: #201e13;
-  /* --color-green: #44c67f;
-  --color-yellow: #ffbe4c;
-  --color-gold: #ca9230;
-  --color-orange: #ff5310;
-  --color-orange-dark: #ff2b00;
-  --color-red: #ef4444;
-  --color-purple: #9553f9;
-  --color-twitter-blue: #343433; */
   --shadow-code: inset 0 0 0 1px #e8e8e8;
   --shadow-note: 4px 4px 0 #074dcf0f;
   --shadow-board: 5px 6px 0 var(--color-beige);
@@ -115,12 +93,12 @@
   .prose {
     @apply leading-base-screen-small;
     h1,
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       all: unset;
-      @apply text-2xl font-medium font-heading text-heading;
-    }
-    h2 {
-      @apply text-xl;
     }
   }
 }
