@@ -4,19 +4,15 @@
 @theme {
   /* all the resets to get rid of unecessary styles loaded by tailwind */
   --color-*: initial;
-  /* --font-size-*: initial;
-	--line-height-*: initial; */
   --default-font-family-*: initial;
   --animate-*: initial;
   --drop-shadow-*: initial;
   --blur-*: initial;
   --default-*: initial;
   --perspective-*: initial;
-  /* --leading-*: initial; */
   --ease-*: initial;
   --inset-shadow-*: initial;
   --transition-timing-function-*: initial;
-  /* --text-*: initial; */
   --shadow-*: initial;
 
   /* new variables */
@@ -90,21 +86,15 @@
     background-color: var(--color-beige-alt) !important;
     line-height: 1.1 !important;
   }
+  ::selection {
+    @apply bg-[#DDD4FB];
+  }
   .prose {
     @apply leading-base-screen-small;
     h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      all: unset;
-    }
     h2 {
-      @apply font-heading text-2xl font-medium text-heading;
-    }
-    h3 {
-      @apply font-heading text-xl font-medium text-heading;
+      all: unset;
+      @apply font-sans italic bg-selection-blue/40 w-fit;
     }
   }
 }
