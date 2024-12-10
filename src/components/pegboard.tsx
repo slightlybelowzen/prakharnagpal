@@ -16,10 +16,10 @@ function Note({
 }) {
   return (
     <div
-      className={`shadow-note leading-[1.35] text-[0.95rem] absolute ${pos} border border-blue/15 bg-selection-blue/30 w-fit h-fit max-w-[15rem] px-4 py-2 flex justify-center items-center`}
+      className={`shadow-note text-[0.95rem] absolute ${pos} border border-blue/15 bg-selection-blue/30 w-fit h-fit max-w-[15rem] px-4 py-2 flex justify-center items-center`}
     >
       <p className="flex flex-col gap-1">
-        <a href={link} className="font-mono text-xs uppercase">
+        <a href={link} className="font-mono-heading text-xs uppercase">
           {title}
           {external && <ArrowUpRight class="inline w-4 h-4 -ml-0.5 mb-0.5" />}
         </a>

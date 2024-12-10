@@ -79,8 +79,10 @@
   --shadow-board: 5px 6px 0 var(--color-beige);
 
   /* fonts */
-  --font-sans: "Geist", sans-serif;
-  --font-mono: "Geist Mono", ui-monospace;
+  --font-sans: "Lato", sans-serif;
+  --font-mono-heading: "Geist Mono", ui-monospace;
+  --font-heading: "Sunset", serif;
+  --font-mono-code: "Menlo", ui-monospace;
 }
 
 @layer base {
@@ -92,16 +94,16 @@
   }
   h1,
   h2 {
-    @apply text-sm tracking-tight uppercase underline-offset-2 underline font-mono text-graphic-black;
+    @apply text-sm tracking-tight uppercase underline-offset-2 underline font-mono-heading text-graphic-black;
   }
   ul {
     @apply list-disc list-inside flex flex-col gap-2;
   }
   code {
-    @apply font-mono text-sm bg-beige px-1 py-0.5 rounded-md shadow-code tracking-tight;
+    @apply font-mono-code text-sm bg-beige px-1.5 py-0.5 rounded-md shadow-code tracking-tight;
   }
   pre > code {
-    @apply bg-transparent tracking-tight font-mono text-sm shadow-transparent;
+    @apply bg-transparent tracking-tight font-mono-code text-sm shadow-transparent;
     padding: 0 !important;
   }
   pre {
@@ -109,14 +111,18 @@
     font-variant-ligatures: common-ligatures;
     background-color: var(--color-beige-alt) !important;
     line-height: 1.1 !important;
-    /* ::selection {
-      background-color: var(--color-selection-blue);
-      color: var(--color-selection-white);
-    } */
   }
-  /* ::selection {
-    @apply bg-selection-blue text-selection-white;
-  } */
+  .prose {
+    @apply leading-base-screen-small;
+    h1,
+    h2 {
+      all: unset;
+      @apply text-2xl font-medium font-heading text-heading;
+    }
+    h2 {
+      @apply text-xl;
+    }
+  }
 }
 
 @layer components {

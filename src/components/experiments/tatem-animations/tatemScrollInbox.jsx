@@ -1,14 +1,7 @@
-// import {
-//   motion,
-//   useScroll,
-//   useMotionValueEvent,
-//   useTransform,
-// } from "framer-motion";
-// import { useRef } from "react";
-// import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function TatemScrollInbox() {
-  // const [currentLabelId, setCurrentLabelId] = useState(0);
+  const { scrollYProgress } = useScroll();
   const data = [
     {
       id: 1,
@@ -38,7 +31,7 @@ export default function TatemScrollInbox() {
   ];
   return (
     <div
-      className={`group flex h-full w-full flex-row items-center justify-center gap-5 
+      className={`sticky group flex h-full w-full flex-row items-center justify-center gap-5 
         rounded-lg bg-[#00000008] border border-beige-dark px-10 sm:min-h-[36vh] md:flex-col md:gap-0.5`}
     >
       <div className="relative flex flex-col gap-1">
@@ -55,7 +48,15 @@ export default function TatemScrollInbox() {
           ))}
         </div>
         <div className="relative hidden h-0.5 w-full items-center overflow-hidden rounded-full bg-beige-dark md:block">
-          <div className="z-10 h-full w-full rounded bg-graphic-black duration-200 max-w-[11%]" />
+          <motion.div
+            style={{
+              transform: useTransform(
+                scrollYProgress,
+                (val) => `translateX(${val * 50}%)`
+              ),
+            }}
+            className="z-10 h-full w-full rounded bg-graphic-black duration-200 max-w-[11%]"
+          />
         </div>
       </div>
     </div>
