@@ -22,107 +22,25 @@
 
   --tracking-tight: -0.015em;
 
-  /* colors */
-  --color-selection-white: #008cff;
-  --color-white: #fff;
-  --color-text: #474645;
-  --color-selection-blue: #d8ecfc;
-  --color-app-green: #34c759;
-  --color-app-gray: #747484;
-  --color-app-blue: #018dff;
-  --color-app-pink: #f966ac;
-  --color-graphic-black: #343433;
-  --color-graphic-gray: #e2d6c5;
-  --color-heading: #343433;
-  --color-body: #494440;
-  --color-body-muted: #848281;
-  --color-gray: #747484;
-  --color-gray-light: #f2f0ed;
-  --color-beige: #fbfaf9;
-  --color-beige-alt: rgba(251, 250, 249, 0.4);
-  --color-beige-alt-dark: rgba(234, 234, 234, 0.5);
-  --color-beige-dark: #eaeaea;
-  --color-focus: #848281;
-  --color-white: #ffffff;
-  --color-blue: #3784f4;
-  --color-blue-light: #eefbfd;
-  --color-selection-bg: #eceadf;
-  --color-selection-text: #201e13;
-  --shadow-code: inset 0 0 0 1px #e8e8e8;
-  --shadow-note: 4px 4px 0 #074dcf0f;
-  --shadow-board: 5px 6px 0 var(--color-beige);
 
   /* fonts */
-  --font-sans: "Lato", sans-serif;
-  --font-mono-heading: "Geist Mono", ui-monospace;
+  --font-body: "Lato", sans-serif;
   --font-heading: "Sunset", serif;
-  --font-mono-code: "Menlo", ui-monospace;
 }
 
 @layer base {
   body {
-    @apply font-sans antialiased text-base md:leading-base leading-base-screen-small bg-white text-text;
+    /* dark color scheme */
+    @apply font-body antialiased text-base leading-base bg-[#121212] text-[#f5f5f5] ;
   }
-  a {
-    @apply text-blue decoration-blue-light underline underline-offset-3 transition-all hover:decoration-selection-blue hover:decoration-2 duration-200;
-  }
-  h1,
-  h2 {
-    @apply text-sm tracking-tight uppercase underline-offset-2 underline font-mono-heading text-graphic-black;
-  }
-  ul {
-    @apply list-disc list-inside flex flex-col gap-2;
-  }
-  code {
-    @apply font-mono-code text-sm bg-beige px-1.5 py-0.5 rounded-md shadow-code tracking-tight;
-  }
-  pre > code {
-    @apply bg-transparent tracking-tight font-mono-code text-sm shadow-transparent;
-    padding: 0 !important;
-  }
-  pre {
-    @apply border border-beige-dark/80 px-3 py-2 tracking-tighter shadow-board tracking-tight;
-    font-variant-ligatures: common-ligatures;
-    background-color: var(--color-beige-alt) !important;
-    line-height: 1.1 !important;
-  }
-  ::selection {
-    @apply bg-[#DDD4FB];
-  }
-  .prose {
-    @apply leading-base-screen-small;
-    h1,
-    h2 {
-      all: unset;
-      @apply font-sans bg-selection-blue/40 w-fit;
-    }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-2xl uppercase;
   }
 }
 
 @layer components {
   .stack {
     @apply flex flex-col gap-4;
-  }
-  .grid {
-    background-image: linear-gradient(
-        to right,
-        var(--color-beige-alt-dark) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        to bottom,
-        var(--color-beige-alt-dark) 1px,
-        transparent 1px
-      );
-  }
-  .grid-size-24 {
-    background-size: 24px 24px;
-  }
-  .grid-header {
-    background-image: linear-gradient(
-      45deg,
-      var(--color-beige-alt-dark) 1px,
-      transparent 1px
-    );
   }
 }
