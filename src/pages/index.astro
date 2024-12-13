@@ -3,6 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="slightlybelowzen">
-  <h1>This is a start</h1>
+  <main class="grid grid-cols-10">
+    <section class="col-span-2 py-2">
+      <p>This is sidebar content</p>
+    </section>
+    <section class="col-span-6 py-10">
+      <p>Let's write some content.</p>
+    </section>
+    <section class="col-span-2 py-10">
+      <p>
+        This is mostly for extra context or information you might want to read.
+      </p>
+    </section>
+  </main>
 </BaseLayout>
-
