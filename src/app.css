@@ -61,10 +61,13 @@
   h1,
   h2,
   h3 {
-    @apply text-lg font-heading leading-[1.3];
+    @apply text-lg font-heading hover:text-cyan transition-colors duration-100;
+  }
+  ul {
+    @apply list-inside list-disc;
   }
   ::selection {
-    @apply bg-selection text-cyan;
+    @apply bg-selection text-light-black;
   }
 }
 
